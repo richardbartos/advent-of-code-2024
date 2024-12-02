@@ -64,11 +64,11 @@ def is_small_step_damp(integer_list):
         else:
             tmp_results.append(False)
 
-
     if all(tmp_results):
         return True
     else:
         return False
+
 
 def all_but_one_equal(arr):
     counts = [0] * len(arr)
@@ -84,6 +84,7 @@ def all_but_one_equal(arr):
     most_common_type = max(counts)
 
     return most_common_type == len(arr) or most_common_type == len(arr) - 1
+
 
 def find_safe_reports(data):
     """
