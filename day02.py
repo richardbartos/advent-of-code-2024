@@ -1,6 +1,7 @@
 import os.path
 
 data_input = []
+dampened = False
 
 
 def is_sequence(integer_list):
@@ -22,6 +23,7 @@ def is_sequence(integer_list):
 
 def is_sequence_damp(integer_list):
     tmp_results = []
+    global dampened
 
     for i in range(len(integer_list) - 1):
         if integer_list[i] > integer_list[i + 1]:
@@ -31,8 +33,7 @@ def is_sequence_damp(integer_list):
         else:
             return False
 
-    false_count = tmp_results.count(False)
-    true_count = tmp_results.count(True)
+    print(tmp_results)
 
     if all(tmp_results) or not any(tmp_results):
         return True
